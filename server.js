@@ -2,7 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3001;
 const DBPATH = path.join(__dirname, '/db/db.json');
 // Middleware for parsing JSON in request body
 app.use(express.json());
